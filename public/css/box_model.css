@@ -1,0 +1,48 @@
+h1{
+	color: #61037a;
+	font-weight: bold;
+	text-decoration: underline;
+}
+div{
+	width: 150px;
+	height: 50px;
+	border: 1px solid black;
+	padding: 10px;
+
+}
+
+div.red{
+	background-color: red;
+}
+
+div.gold{
+	background-color: #c79110;
+	margin: 10px 0px 0px 30px;
+}
+
+div.yellow{
+	background-color: yellow;
+	margin: 10px 0px 0px 60px;
+}
+
+div.green{
+	background-color: green;
+	margin: 10px 0px 0px 90px;
+}
+
+div.blue{
+	background-color: blue;
+	margin: 10px 0px 0px 120px;
+}
+
+div.violet{
+	background-color: #d46bdb;
+	margin: 10px 0px 0px 150px;
+}
+
+p{
+	font-weight: bold;
+	color: white;
+
+	font-family: Helvetica Arial sans-serif;
+}

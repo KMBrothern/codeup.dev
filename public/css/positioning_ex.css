@@ -1,0 +1,85 @@
+#ribbon{
+	position:relative;
+	float:right;
+	top: 0px;
+	right: 0px;
+}
+
+img{
+
+	position: relative;
+	bottom: 72px;
+	left: 50px;
+	float: right;
+}
+
+h1{
+	color: #61037a;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#container{
+	margin: 50px auto;
+	width: 500px;
+	height:200px;
+	border: 1px solid black;
+	padding: 10px;
+}
+div{
+	margin: 50px 0px 0px 50px;
+	border: 1px solid black;
+	width: 70px;
+	height:70px;
+	text-align: left;
+	text-indent: 20px;
+	
+}
+
+
+
+
+div#red{
+	background-color: red;
+	font-weight: bold;
+	color: white;
+	float: left;
+
+
+}
+
+div#gold{
+	background-color: #c79110;
+	font-weight: bold;
+	color: white;
+	float: left;
+}
+
+div#yellow{
+	background-color: yellow;
+	font-weight: bold;
+	color: white;
+	float: left;
+}
+
+div#green{
+	background-color: green;
+	font-weight: bold;
+	color: white;
+	float: left;
+	clear: both;
+}
+
+div#blue{
+	background-color: blue;
+	font-weight: bold;
+	color: white;
+	float: left;
+}
+
+div#violet{
+	background-color: #d46bdb;
+	font-weight: bold;
+	color: white;
+	float: left;
+}
+

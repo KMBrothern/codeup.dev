@@ -1,0 +1,32 @@
+.intro{
+	background: url(/img/kbflying.jpg);
+	color:
+}
+.btn-default{
+	border: 1px solid #fff; 
+	color: #81d8d0;
+
+}
+.btn-default:hover,
+.btn-default:focus{
+	border: 1px solid #81d8d0; 
+	background-color: #81d8d0; 
+
+}
+.btn-circle{
+	color: #81d8d0;
+}
+
+.navbar-custom a {
+    color: #81d8d0;
+}
+.aqua{
+	color: #81d8d0;
+}
+.kbname{
+	opacity: 0.5
+}
+body{
+	background-color: #000;
+	background-image: url(/img/dark_embroidery.png);
+}

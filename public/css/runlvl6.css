@@ -1,5 +1,5 @@
 .intro{
-	background: url(/img/kbflying.jpg);
+	background: url(/img/kbfly.jpg);
 	color:
 }
 .btn-default{
@@ -28,5 +28,47 @@
 }
 body{
 	background-color: #000;
-	background-image: url(/img/dark_embroidery.png);
+	background-image: url(/img/congruent_outline.png);
+}
+
+.kb{
+	opacity: 0.7
+}
+#border_pic{
+	border: 5px solid #fff;
+	box-shadow: 0px 0px 5px 5px #81d8d0;
+}
+/*If I commen these back in see html comments for results
+#border_page{
+	border:10px solid #000;
+}
+#border2{
+	border: 2px solid #fff;
+}*/
+.icolor{
+color: #f45;
+}
+.mcolor{
+color: #ffd700;
+}
+.acolor{
+color: #ff00ff ;	
+}
+.gcolor{
+color: #ee8011;
+}
+.icolor2{
+color: #00ff00;
+}
+.ncolor{
+color: #ff0000;
+}
+.bcolor{
+color: #088da5;
+}
+.lcolor{
+color: #b262df ;
+}
+.ecolor{
+color: #2be382;	
 }

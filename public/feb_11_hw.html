@@ -6,11 +6,11 @@
 <body>
 
 <script>
+(function () {
 var random = Math.floor((Math.random()*100)+1);
 do{
 	var guess = prompt('Guess the number!');
-	console.log(guess);
-	console.log(random);
+	
 
 	if (guess < random) {
 		alert('Oooh, too low, guess higher!');
@@ -20,7 +20,7 @@ do{
 		alert('Whoa, too high, guess lower!');
 		continue;
 	} else { (guess == random)
-		alert('Congrats, you guessed the correct number');
+		alert('Congrats, you guessed the correct number, you\'re Awesome!!');
 	}
 	var confirmed = confirm('Do you want to play again?');
 	if(confirmed) {
@@ -32,6 +32,8 @@ do{
 		break;
 	}
 }while (guess != random);
+
+}) ();
 </script>
 
 </body>

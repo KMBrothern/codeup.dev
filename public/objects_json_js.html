@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+
+
+var books = [
+		{
+			"titleBook": "The Total Money Makeover",
+			"firstName": "Dave ",
+			"lastName": "Ramsey"
+		},
+		
+		{
+			"titleBook": "Instinct",
+			"firstName": "T.D. ",
+			"lastName": "Jakes"
+		},
+		
+		{
+			"titleBook": "The Hungry Little Catepillar",
+			"firstName": "Eric ",
+			"lastName": "Carlisle"
+		},
+		
+		{
+			"titleBook": "Start",
+			"firstName": "Jon ",
+			"lastName": "Acuff"
+		},
+		
+		{
+			"titleBook": "Think and Grow Rich",
+			"firstName": "Napoleon ",
+			"lastName": "Hill"
+		}
+	];
+
+
+books.forEach(function(book, index) 
+{
+    console.log("Book # " + index);
+    console.log("Title: " + book.titleBook);
+    console.log("Author: " + book.firstName + book.lastName);
+    console.log("*=*=*=*=*=*=*=*=*=*=*=");
+});
+
+
+</script>
+
+</body>
+</html>

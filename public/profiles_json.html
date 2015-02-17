@@ -905,10 +905,15 @@ var greenEyes = 0;
 var brownEyes = 0;
 var blueEyes = 0;
 var totalActiveBalance = 0;
+var strawberry = 0;
+var apple = 0;
+var banana = 0;
 
-
-
+var phoneNumbers = [];
+var emails = [];
 var companyNames = [];
+var latitude = [];
+var longitude = [];
 
 arrayOfProfiles.forEach(function(element, index) {
       sumOfAllAccounts += getAmount(element.balance);
@@ -933,7 +938,26 @@ arrayOfProfiles.forEach(function(element, index) {
         brownEyes ++;
       }
 
-      companyNames.push(element.company);
+
+companyNames.push(element.company);
+      emails.push(element.email);
+      phoneNumbers.push(element.phone);
+      latitude.push(element.latitude);
+      longitude.push(element.longitude);
+
+    
+
+      if(element.favoriteFruit == "apple"){
+        apple ++;
+
+      }else if (element.favoriteFruit == "banana") {
+        banana ++;
+      }else if (element.favoriteFruit == "strawberry"){
+        strawberry ++;
+      }
+
+      
+    
 
 });
 
@@ -946,6 +970,14 @@ if(Math.max(blueEyes, brownEyes, greenEyes) == blueEyes) {
     var eyes = "Green";
   }
 
+
+if(Math.max(strawberry, banana, apple) == apple) {
+    var favFruit = "Apple";
+  } else if (Math.max(strawberry, banana, apple) == banana) {
+    var favFruit = "Banana";
+  } else {
+    var favFruit = "Strawberry";
+  }
 // var avgAge = 1. find all the ages, add them up and then get the average of them (half done) --avg would go into the reports object as a new sequence where you take the sum of all ages variable and divide it by the # of profiles to get the avg
 
 // var genderCount = 1. find out how many of each gender over all total accounts
@@ -968,6 +1000,11 @@ var report = {
   "number_of_active_profiles": activeCount,
   "all_companies": companyNames,
    "most_common_eye_color": eyes,
+   "all_email_addresses": emails,
+   "all_phone_numbers": phoneNumbers,
+   "favoriteFruit": favFruit,
+   "all_longitude": longitude,
+   "all_latitude" : latitude,
    "compare_balances_for_active_vs_nonactive_users": 
        {
         "totalActiveBalance": totalActiveBalance,

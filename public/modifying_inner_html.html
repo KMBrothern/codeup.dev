@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<p id="main-heading">Hello World!</p>
+
+
+<script>
+    // get the main heading h1 by id
+    var mainHeading = document.getElementById('main-heading');
+
+    function increaseFont() {
+        var content = mainHeading.innerHTML
+        mainHeading.innerHTML = "<h1>" + content + "</h1>";
+    }
+
+    mainHeading.addEventListener('click', increaseFont, false);
+</script>
+
+</body>
+</html>

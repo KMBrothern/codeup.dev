@@ -1,0 +1,12 @@
+h2{
+	color: #00e5ee;
+	font-family: Arial;
+}
+
+body{
+	background-color: #000;
+}
+.bomb{
+
+	background: url(/img/batmanbomb.jpeg);
+}

@@ -1,3 +1,4 @@
+// lorempixel.com- royalty free pictures to use as placeholders etc,
 var blog = [
     {
         "title": "This is a title for this",
@@ -26,19 +27,24 @@ var blog = [
     }
 ]
 
-
+// I need to work on getting this into a function or 2 and having each blog post follow the styling already in use
 
 var blogContent = document.getElementById('blogContent');
 var postInfoString = '';
-    for(i = 0; i < blog.length; i++) {
+
+function newBlogPost(){
+    for (i = 0; i < blog.length; i++) {
         postInfoString += blog[i].title;
         postInfoString += blog[i].author;
         postInfoString += blog[i].date;
         postInfoString += blog[i].category;
         postInfoString += blog[i].post;
 
-        console.log(postInfoString);
+        }
     }
+    
+newBlogPost(blog);
+console.log(postInfoString);
 blogContent.innerHTML = postInfoString;
 
 

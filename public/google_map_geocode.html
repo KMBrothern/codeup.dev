@@ -45,10 +45,13 @@ geocoder.geocode( { 'address': address}, function(results, status) {
 // Create lat and long for our marker position
     var burritoKing = { lat: 37.59455, lng: -120.954724 };
 
+var image = 'img/crown1.jpeg';
   // Add the marker to our existing map
     var marker = new google.maps.Marker({
       position: burritoKing,
-      map: map
+      map: map,
+      animation: google.maps.Animation.BOUNCE,
+      icon:image
     });
 
     // Create a new infoWindow object with content

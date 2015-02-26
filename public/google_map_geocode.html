@@ -13,7 +13,7 @@
   <div id="map-canvas"></div>
 
   <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=?"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2RIVPdKcte9K77bbif2qsR5GE9-N4RJY"></script>
 
   <!-- Script to show address on map -->
   <script type="text/javascript">
@@ -34,7 +34,8 @@ geocoder.geocode( { 'address': address}, function(results, status) {
       // Set the zoom level
       zoom: 15,
       // This sets the center of the map at our location
-      center: results[0].geometry.location
+      center: results[0].geometry.location,
+
     }
     // Render the map
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);

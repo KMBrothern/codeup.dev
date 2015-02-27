@@ -3,6 +3,32 @@
 <head>
 	<title></title>
 <script src="/js/jquery-2.1.3.js"></script>
+<script>
+$(document).ready(function() {
+    alert($('#sweets') + 'Holla at these cavaties, yo!');
+    $('.codeup').css('background', '#81d8d0');
+    $('.codeup').css('border', '2px solid #000');
+    $('body').css('background', '#F0F');
+
+    $('h1').click(function() {
+	$(this).css('background', 'white');
+});
+
+$('p').click(function () {
+	$(this).css('font-size', '18px');
+});
+
+$('li').hover(
+        function() {
+            $(this).css('color', '#fff');
+        },
+        function() {
+            $(this).css('color', '#000');
+        }
+    );
+
+});
+</script>
 </head>
 <body>
 <h1 class="codeup">Welcome to JQuery</h1>
@@ -37,15 +63,36 @@
 
 </div>
 
-<script>
+ <script>
+// $('h1').click(function() {
+// 	$(this).css('background', 'white');
+// });
 
-$(document).ready(function() {
-    alert($('#sweets') + 'Holla at these cavaties, yo!');
-    $('.codeup').css('background', '#81d8d0');
-    $('.codeup').css('border', '2px solid #000');
-    $('body').css('background', '#F0F');
+// $('p').click(function () {
+// 	$(this).css('font-size', '18px');
+// });
 
-});
-</script>
+// $('li').hover(
+//         function() {
+//             $(this).css('color', '#fff');
+//         },
+//         function() {
+//             $(this).css('color', '#000');
+//         }
+//     );
+
+
+
+ </script>
 </body>
 </html>
+
+<!-- $('li').hover(
+	function() {
+		$(this).css('color', 'red');
+		},
+	function() {
+		$(this).css('color' '#000'); forgot my damn ,
+		}
+	}; they have );
+}); -->

@@ -9,5 +9,15 @@ $('document').ready(function (){
 
 	});
 
+	$('ul').each(function(index) {
+		$(this).children().first().css('font-weight', 'bold').css('color', 'white');
+	
+	});
+
+	$('li').click(function() {
+		$(this).parent().addClass('invisible');
+
+				
+	});
 
 });

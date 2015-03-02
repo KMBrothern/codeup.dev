@@ -3,7 +3,7 @@ $('document').ready(function (){
 	// $('dt').click(function()
 	$('#toggleButton').click(function(){
 		event.preventDefault();
-			$('dd').toggleClass('invisible');
+			$('dd').toggle();
 		// }
 		
 
@@ -15,7 +15,7 @@ $('document').ready(function (){
 	});
 
 	$('li').click(function() {
-		$(this).parent().addClass('invisible');
+		$(this).parent().hide();
 
 				
 	});

@@ -3,7 +3,7 @@ $('document').ready(function (){
 	// $('dt').click(function()
 	$('#toggleButton').click(function(){
 		event.preventDefault();
-			$('dd').fadeToggle();
+			$('dd').slideToggle();
 		// }
 		
 
@@ -15,7 +15,7 @@ $('document').ready(function (){
 	});
 
 	$('h3').click(function() {
-		$(this).next().fadeToggle();
+		$(this).next().slideToggle();
 
 				
 		});

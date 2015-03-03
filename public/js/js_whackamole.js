@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var delay = 3000; // delay time in milliseconds
 
 	var timeoutId = setTimeout(function () {
-		$('#mainMole').fadeIn();
+		$('#mainMole').slideToggle();
 		console.log('I faded in');
 
 	}, delay);
@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 	$('#mainMole').click(function(){
 		
-		$(this).fadeOut();
+		$(this).slideToggle();
 		console.log('On click, I faded out');
 
 	});

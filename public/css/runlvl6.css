@@ -80,3 +80,15 @@ color: #b262df ;
 .ecolor{
 color: #2be382;	
 }
+.subtitle{
+	text-indent: 400px;
+}
+#mainTitle{
+	text-indent: 200px;
+	font-size: 40px;
+	text-decoration: underline;
+}
+#ajaxPhoto{
+	float: right;
+	opacity: .4;
+}

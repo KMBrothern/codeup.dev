@@ -1,0 +1,39 @@
+/*custom css for ajax store, blog and weather api*/
+.subtitle{
+	text-indent: 400px;
+}
+#mainTitle{
+	text-indent: 200px;
+	font-size: 40px;
+	text-decoration: underline;
+}
+#ajaxPhoto{
+	float: right;
+	opacity: .4;
+	display: none;
+}
+#refreshInventory{
+	background: #81d8d0;
+}
+.container-fluid{
+	background: #81d8d0;
+}
+.row{
+	
+	background: #81d8d0;
+	border-radius: 5px;
+}
+.col-md-4{
+	height:250px;
+	width: 300px;
+	border-radius: 5px;
+	background-color: #fff;
+	margin: 40px;
+	opacity: .5;
+	padding-left: 5px;
+
+}
+#map-canvas {
+    width: 100%;
+    height: 450px;
+  }

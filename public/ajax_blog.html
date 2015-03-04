@@ -11,6 +11,9 @@
     
     <link href="css/runlvl6.css" rel="stylesheet">
 
+    <link href="css/ajax_exercises.css" rel="stylesheet">
+
+
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -22,7 +25,7 @@
 <div id="container">
 	<h2 id="mainTitle" class="aqua">Welcome to the Ajax Blog</h2>
 	<h4 class="subtitle">No Cleaning Required...</h4>
-			<img id="ajaxPhoto"src="/img/ajax.jpg">
+			<img id="ajaxPhoto" src="/img/ajax.jpg">
 
 		<div id="posts">
 
@@ -57,10 +60,27 @@ var blogData = (function() {
     });
     
 
+var delay = 4000; // delay time in milliseconds
+
+	var timeoutId = setTimeout(function () {
+		$('#ajaxPhoto').fadeIn();
+		console.log('I faded in');
+
+	}, delay);
+
+$('#ajaxPhoto').click(function(){
+		
+		$(this).fadeOut();
+		console.log('On click, I faded out');
+
+	});
     
 });
 
 blogData();
+
+
+
 </script>
 </body>
 </html>

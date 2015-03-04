@@ -48,7 +48,7 @@
         	});
         	
 
-
+var googleWeather;
 // Set our map options
     var mapOptions = {
       // Set the zoom level
@@ -64,22 +64,21 @@
     var marker = new google.maps.Marker({
       position: mapOptions.center,
       draggable: true,
-      // animation: google.maps.Animation
+      animation: google.maps.Animation.BOUNCE,
       map: map
     });
 
     // Get lat and long for our marker position
-   // google.maps.event.addListener(marker, 'dragend', function (event) 
+   // google.maps.event.addListener(marker, 'dragend', function (event) {
+
+   //  console.log(this.getPosition());
+   //  googleWeather = $.ajax('http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + this.getPosition().lat() + '&lon=' + this.getPosition().lon
+
+   // });
 
     
 
-    // // Create a new infoWindow object with content
-    // var infowindow = new google.maps.InfoWindow({
-    //     content: 'Gaining weight, one rolled taco at a time.'
-    // });
-
-    // // Open the window using our map and marker
-    // infowindow.open(map,marker);
+    
 
 
     });

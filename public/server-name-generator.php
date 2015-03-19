@@ -4,7 +4,24 @@ $nouns = ['carpet', 'rocket', 'unicorn', 'broom', 'sandwich', 'unitard', 'flower
 $randomAdjective = mt_rand(0,9);
 $randomNoun = mt_rand(0,9);
 
+function pageController()
+{
+    // My adjectives and nouns array
+    $adjectives = ['skinny', 'red', 'burnt', 'happy', 'smoking', 'tall', 'crazy', 'silky', 'sparkling', 'rich'];
+	$nouns = ['carpet', 'rocket', 'unicorn', 'broom', 'sandwich', 'unitard', 'flower', 'orca', 'anaconda', 'balloon'];
+	// Initialize an empty data array.
+    $data = [];
 
+	$data['randomAdjective'] = mt_rand(0,9);
+	$data['randomNoun'] = mt_rand(0,9);
+    
+    
+
+    // Return the completed data array.
+    return $data;    
+}
+
+extract(pageController());
 ?>
 
 
@@ -19,11 +36,7 @@ $randomNoun = mt_rand(0,9);
 <div class="kanye">
 	<img src="/img/image-3.gif">
 </div>
-<h2><? for ($i=0; $i < count($adjectives[$i]); $i++) : ?>
-		<? for ($i=0; $i < count($nouns[$i]); $i++) : ?> 
-			<?= "My Random Server Name Is: \n ". " ".$adjectives[$randomAdjective]." ".$nouns[$randomNoun]; ?>
-	<? endfor; ?>
-<? endfor; ?></h2>
+<h2>My Random Server Name Is: <?= $adjectives[$randomAdjective]." ".$nouns[$randomNoun]; ?></h2>
 </body>
 </html>
 

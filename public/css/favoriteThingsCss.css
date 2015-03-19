@@ -1,0 +1,17 @@
+body{
+	background-color: black
+
+}
+h1{
+	color: green;
+}
+.table{
+	height: 410px;
+	width: 430px;
+	margin-left: 280px;
+}
+li{
+	font-size: 35px;
+	text-decoration: underline;
+	color: #f4f;
+}

@@ -1,0 +1,20 @@
+body{
+	background-color: #81d8d0;
+
+}
+h1{
+	font-size: 90px;
+	text-decoration: underline;
+	text-align: center;
+	font-family: Copperplate;
+}
+h2{
+	font-size:75px;
+	font-family: Copperplate;
+	text-indent: 200px;
+
+}
+.kanye{
+	float: left;
+	position: relative;
+}

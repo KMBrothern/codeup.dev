@@ -14,10 +14,10 @@ $favoriteThings = ['The Beach', 'Sugar', 'Sleeping', 'TV\'ing..yes it is now a n
 <h1>My Favorite Things</h1>
 <div class ="table">
 	<ol>
-		<?php foreach ($favoriteThings as $favoriteThing) { ?>
+		<? foreach ($favoriteThings as $favoriteThing) : ?>
 			
-		<li><?php echo $favoriteThing; ?></li>
-		<?php } ?>
+			<li><?= $favoriteThing; ?></li>
+		<? endforeach; ?>
 	</ol>
 
 

@@ -21,7 +21,7 @@ $randomNoun = mt_rand(0,9);
 </div>
 <h2><? for ($i=0; $i < count($adjectives[$i]); $i++) : ?>
 		<? for ($i=0; $i < count($nouns[$i]); $i++) : ?> 
-			<?= $adjectives[$randomAdjective]." ".$nouns[$randomNoun]; ?>
+			<?= "My Random Server Name Is: \n ". " ".$adjectives[$randomAdjective]." ".$nouns[$randomNoun]; ?>
 	<? endfor; ?>
 <? endfor; ?></h2>
 </body>

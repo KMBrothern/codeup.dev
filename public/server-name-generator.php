@@ -39,6 +39,10 @@ extract(pageController());
 	<img src="/img/image-3.gif">
 </div>
 <h2>My Random Server Name Is: <?= $adjectives[$randomAdjective]." ".$nouns[$randomNoun]; ?></h2>
+<div>
+	<button class ="refresh">Get New Server Name</button>
+<!-- button needs event listener to listen for click and perform refresh page action -->
+</div>
 </body>
 </html>
 

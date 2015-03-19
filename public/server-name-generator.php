@@ -11,7 +11,9 @@ function pageController()
 	$nouns = ['carpet', 'rocket', 'unicorn', 'broom', 'sandwich', 'unitard', 'flower', 'orca', 'anaconda', 'balloon'];
 	// Initialize an empty data array.
     $data = [];
-
+// the next 2 lines are just returning my random number that I want it to use
+    // to go into each array as the $key and return me the $value that is stored 
+    // with the match so that I can output it to my screen
 	$data['randomAdjective'] = mt_rand(0,9);
 	$data['randomNoun'] = mt_rand(0,9);
     

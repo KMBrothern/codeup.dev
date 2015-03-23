@@ -10,6 +10,7 @@ if ($username == '' && $password == '') {
 
 } else if($username == 'guest' && $password == 'password') {
     header("Location: authorized.php");
+    exit();
 
 }else {
     echo "Sorry, login failed.";

@@ -31,50 +31,28 @@
     <script>
 
  var listener1 = function (event) {
-            mainHeader.innerHTML = "JavaScript is Cool!";
+    mainHeader.innerHTML = "JavaScript is Cool!";
             
-        }
+}
 
 var listener2 = function (event) {
-            alert('Wrong Choice, Kabooommmm!!!!! You just blew up!!');
-        }      
+    alert('Wrong Choice, Kabooommmm!!!!! You just blew up!!');
+}      
 
 var listener3 = function (event) {
     var response =prompt('Are you truly bou\'t this life??');
-            alert( 'The lie detector test determined that was a lie');
-            alert( 'HAHAHAHAHAHAHAHAHAHA!!!!!');
+    alert( 'The lie detector test determined that was a lie');
+    alert( 'HAHAHAHAHAHAHAHAHAHA!!!!!');
 
-            alert( 'Alerts are just a tad bit annoying, we thinks or nah???');
-            alert( 'HAHAHAHAHAHAHAHAHAHA!!!!!');
+    alert( 'Alerts are just a tad bit annoying, we thinks or nah???');
+    alert( 'HAHAHAHAHAHAHAHAHAHA!!!!!');
 
-        }
+}
 
 var listener4 = function (event) {
-            alert('Goodnight Rip.. x_x');
-        }
-        // todo: get the main header element by id
-        // var mainHeader = ; done
-
-        // todo: set inner html of mainHeader to "JavaScript is Cool" done
-
-        // todo: get the sub header element by id
-        // var subHeader = ; done
-
-        // todo: set the text color of subHeader to blue
-        // done
-
-        // todo: get all list items
-        // var listItems = ; done
-
-        // todo: set text color on every other list item to grey = ((done))
-        // todo: set text color of li with dbid = 1 to blue
-
-        // todo: get all elements with class name sub-paragraph
-        // var subParagraphs = ;
-
-        // todo: change the text in the first sub paragraph to "Mission Accomplished!"
-
-
+    alert('Goodnight Rip.. x_x');
+}
+        
 var mainHeading = document.getElementById('main-header');
 mainHeading.innerHTML = "Javascript is Cool";
 
@@ -89,32 +67,20 @@ var listItems = document.getElementsByTagName('li');
 for (var i = 0; i < listItems.length; i++) {
     var dbid = listItems[i].attributes["data-dbid"].value;
 
-        if((i + 1) % 2 == 0) {
-        	listItems[i].style['color'] = 'grey';
-        }
-        if(dbid ==1) {
-        	listItems[i].style['color'] = 'blue';
-        }
-
+    if((i + 1) % 2 == 0) {
+    	listItems[i].style['color'] = 'grey';
+    }
+    if(dbid ==1) {
+    	listItems[i].style['color'] = 'blue';
     }
 
- 
-	
-
-
-
+}
 
 document.getElementById('btn1').addEventListener('click', listener1, false);
 document.getElementById('btn2').addEventListener('click', listener2, false);
 document.getElementById('btn3').addEventListener('click', listener3, false);
 document.getElementById('btn4').addEventListener('click', listener4, false);
 
-
-
-
-
-    </script>
-
-
+</script>
 </body>
 </html>

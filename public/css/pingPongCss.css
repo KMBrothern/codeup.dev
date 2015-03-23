@@ -1,0 +1,12 @@
+body{
+	background-color: blue;
+	background-image: url("/img/pingpong.jpg");
+}
+a{
+	font-size: 40px;
+}
+h1{
+	text-align: center;
+	font-size: 60px;
+	color: red;
+}

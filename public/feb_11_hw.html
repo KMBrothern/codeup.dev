@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My High Low Game</title>
+    <title>My High Low Game</title>
 </head>
 <body>
 
 <script>
 (function () {
-var random = Math.floor((Math.random()*100)+1);
-do{
-	var guess = prompt('Guess the number!');
-	
+    var random = Math.floor((Math.random()*100)+1);
+    do{
+        var guess = prompt('Guess the number!');
+        
 
-	if (guess < random) {
-		alert('Oooh, too low, guess higher!');
-		continue;
+        if (guess < random) {
+            alert('Oooh, too low, guess higher!');
+            continue;
 
-	} else if (guess > random) {
-		alert('Whoa, too high, guess lower!');
-		continue;
-	} else { (guess == random)
-		alert('Congrats, you guessed the correct number, you\'re Awesome!!');
-	}
-	var confirmed = confirm('Do you want to play again?');
-	if(confirmed) {
-		alert('Great let\'s play again!');
-		random = Math.floor((Math.random()*100)+1);
+        } else if (guess > random) {
+            alert('Whoa, too high, guess lower!');
+            continue;
+        } else { (guess == random)
+            alert('Congrats, you guessed the correct number, you\'re Awesome!!');
+        }
+        var confirmed = confirm('Do you want to play again?');
+        if(confirmed) {
+            alert('Great let\'s play again!');
+            random = Math.floor((Math.random()*100)+1);
 
-	} else {
-		alert('Thanks for playing!');
-		break;
-	}
-}while (guess != random);
+        } else {
+            alert('Thanks for playing!');
+            break;
+        }
+    }while (guess != random);
 
 }) ();
 </script>

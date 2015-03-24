@@ -1,11 +1,14 @@
 <?php
-// if (user is not logged in -same session) {
-//     header("Location: login.php");
-//     exit();
-// }else{
-//     $message = " You are authorized to view this page";
-// }
+
 session_start();
+
+if (empty($_SESSION['LOGGED_IN_USER'])) {
+    header("Location:login.php");
+    exit();
+} else {
+    echo "Welcome, ". $_SESSION['LOGGED_IN_USER'];
+}
+
 var_dump($_SESSION);
 var_dump(session_id());
 ?>
@@ -16,7 +19,7 @@ var_dump(session_id());
     <title></title>
 </head>
 <body>
-<h1><strong>Authorized</strong></h1>
+<h1>You are <strong>Authorized</strong></h1>
+<a href="logout.php">LOGOUT</a>
 </body>
 </html>
-<!-- Welcome,<?= $message ?> -->

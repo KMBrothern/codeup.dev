@@ -3,11 +3,11 @@ require_once 'Auth.php';
 require_once 'Input.php';
 
 session_start();
-
-if (isset($_SESSION['LOGGED_IN_USER'])) {
-    header("Location:authorized.php");
-    exit();
-}
+// going to delete to use Auth::check();
+// if (isset($_SESSION['LOGGED_IN_USER'])) {
+//     header("Location:authorized.php");
+//     exit();
+// }
 
 $username = isset($_POST['username']) ? $_POST['username'] : '';
 $password = isset($_POST['password']) ? $_POST['password'] : '';
@@ -15,8 +15,8 @@ $password = isset($_POST['password']) ? $_POST['password'] : '';
 if ($username == '' && $password == '') {
     echo "Please enter your username and password";
 
-} else if($username == 'guest' && $password == 'password') {
-    $_SESSION['LOGGED_IN_USER'] = $username;
+} else if(Auth::attempt($username, $password)) {
+    // $_SESSION['LOGGED_IN_USER'] = $username;
     header("Location:authorized.php");
     exit();
 }else {

@@ -8,5 +8,20 @@ a{
 h1{
 	text-align: center;
 	font-size: 60px;
-	color: red;
+	color: #19bbd2;
+}
+.miss{
+    text-align: center;
+    font-size: 60px;
+    color: #19bbd2;
+}
+.hit{
+    text-align: center;
+    font-size: 60px;
+    color: red;
+}
+.gameOver{
+    background-color: red;
+    background-image: url("/img/GameOver.jpg");
+
 }

@@ -1,7 +1,7 @@
 <?php
 
 function inputHas($key) {
-    if ($_) {
+    if (isset($_REQUEST[$key])) {
         return true;
     } else {
         return false;
@@ -10,8 +10,8 @@ function inputHas($key) {
 }
 
 function inputGet($key) {
-    if (condition) {
-        return $key
+    if (isset($_REQUEST[$key])) {
+        return $_REQUEST[$key];
     } else {
         return false;
     }
@@ -19,7 +19,7 @@ function inputGet($key) {
 }
 
 function escape($input){
-
+    return htmlentities(strip_tags($input));
 }
 
 ?>

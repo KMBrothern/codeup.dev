@@ -18,7 +18,6 @@ if ($username == '' && $password == '') {
     echo "Please enter your username and password";
 
 } else if(Auth::attempt($username, $password)) {
-    // $_SESSION['LOGGED_IN_USER'] = $username;
     header("Location:authorized.php");
     exit();
 }else {

@@ -10,15 +10,12 @@ class Log
 
         $this->filename = $prefix .'-'. date('Y-m-d').".log";
         $this->handle = fopen($this->filename, 'a');
-        // fwrite($this->handle, PHP_EOL. $logString." "."[$logLevel]"." ".$message);
-        echo "file has been opened for writing, __construct scripts are finished running. \n";
     }
 
     
     public function __destruct()
     {
         fclose($this->handle);
-        echo "__destruct begins, closing appended file.";
 
 
     }

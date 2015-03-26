@@ -26,7 +26,7 @@ class Log
         $time = date('H:i:s');
         $logString = $date." ".$time;
         fwrite($this->handle, PHP_EOL. $logString." "."[$logLevel]"." ".$message);
-        echo "file has been written \n";
+        //Not neccessary for my login exercises-- echo "file has been written \n";
     }
 
 

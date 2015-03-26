@@ -1,12 +1,12 @@
 <?php
-require_once 'Auth.php';
-require_once 'Input.php';
+require_once '../Auth.php';
+require_once '../Input.php';
 
 session_start();
 var_dump($_SESSION);
 var_dump(session_id());
 
-if (!empty($_SESSION['LOGGED_IN_USER'])) {
+if (!empty(Auth::check())) {
     // end the current session    
     Auth::logout();
     header("Location:login.php");

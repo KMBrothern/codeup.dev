@@ -3,21 +3,23 @@ require_once 'Log.php';
 
 class Auth
 {
-    public static $password = '$2y$10$SLjwBwdOVvnMgWxvTI4Gb.YVcmDlPTpQystHMO2Kfyi/DS8rgA0Fm';
+    public static $hash = '$2y$10$SLjwBwdOVvnMgWxvTI4Gb.YVcmDlPTpQystHMO2Kfyi/DS8rgA0Fm';
 
     public static function attempt($username, $password)
     {
-         if ($username == 'guest' && password_verify('password', '$2y$10$SLjwBwdOVvnMgWxvTI4Gb.YVcmDlPTpQystHMO2Kfyi/DS8rgA0Fm')
+         if ($username == 'guest' && password_verify($password, Auth::$hash))
          {
             $_SESSION['LOGGED_IN_USER'] = $username;
         // use Log class to log an info message "User $username logged in."
-            $firstLogin = new Log();
+            $firstLogin = new Log('login');
             $firstLogin->logInfo("User $username logged in.");
-        } else if($username != 'guest' || != password_verify('password', '$2y$10$SLjwBwdOVvnMgWxvTI4Gb.YVcmDlPTpQystHMO2Kfyi/DS8rgA0Fm'))
+            return true;
+        } else if($username != 'guest' || !password_verify($password, Auth::$hash))
         // use Log class to log an error message "User $username failed to log in!"
         {
-            $firstLogin = new Log();
+            $firstLogin = new Log('login');
             $firstLogin->logError("User $username failed to log in!");
+            return false;
         }
         
     }
@@ -36,9 +38,9 @@ class Auth
     public static function user()
     {
         // will return the username of the currently logged in user
-        if(isset($_SESSION['LOGGED_IN_USER'])
+        if(isset($_SESSION['LOGGED_IN_USER']))
         {
-            return $this->username;
+            return $_SESSION['LOGGED_IN_USER'];
         }
 
     }

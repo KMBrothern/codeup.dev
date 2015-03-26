@@ -1,14 +1,16 @@
 <?php
-require_once 'Auth.php';
-require_once 'Input.php';
+require_once '../Auth.php';
+require_once '../Input.php';
 
 session_start();
 
-if (empty($_SESSION['LOGGED_IN_USER'])) {
+if (Auth::check()) {
+    echo "Welcome, ". Auth::user();
+    
+} else {
     header("Location:login.php");
     exit();
-} else {
-    echo "Welcome, ". $_SESSION['LOGGED_IN_USER'];
+    
 }
 
 var_dump($_SESSION);

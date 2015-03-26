@@ -1,16 +1,18 @@
 <?php
-require_once 'Auth.php';
-require_once 'Input.php';
+require_once '../Auth.php';
+require_once '../Input.php';
 
 session_start();
 // going to delete to use Auth::check();
-// if (isset($_SESSION['LOGGED_IN_USER'])) {
-//     header("Location:authorized.php");
-//     exit();
-// }
+if (Auth::check()) 
+    {
+    header("Location:authorized.php");
+    exit();
+    } 
 
-$username = isset($_POST['username']) ? $_POST['username'] : '';
-$password = isset($_POST['password']) ? $_POST['password'] : '';
+
+$username = Input::has('username') ? Input::get('username') : '';
+$password = Input::has('password') ? Input::get('password') : '';
 
 if ($username == '' && $password == '') {
     echo "Please enter your username and password";

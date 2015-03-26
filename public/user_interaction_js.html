@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+// todo: Ask the user for their name.--Finished
+// todo: Keep asking if an empty input is provided.--Finished
+// todo: Show an alert message that welcomes the user based on their input.--Finished
+
+do
+{
+    var whatIsName = prompt('What is your name?');
+}while(whatIsName == '');
+
+if (whatIsName != '') 
+{
+    alert("Welcome " + whatIsName);
+};
+ 
+
+// todo: Ask the user if they like pizza.
+var likePizza = confirm('Do you like pizza?');
+//       Based on their answer show a creative alert message.
+if (likePizza) 
+{
+    alert('Me too! Pizza is pretty awesome');
+
+}else{
+    alert('Boo, what kind of human doesn\'t like Pizza');
+}
+
+
+</script>
+
+</body>
+</html>

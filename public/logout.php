@@ -7,7 +7,7 @@ var_dump($_SESSION);
 var_dump(session_id());
 
 if (!empty(Auth::check())) {
-    // end the current session    
+    // end the current session 
     Auth::logout();
     header("Location:login.php");
     exit();

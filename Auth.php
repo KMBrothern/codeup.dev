@@ -3,24 +3,33 @@ require_once 'Log.php';
 
 class Auth
 {
-    public static $hash = '$2y$10$SLjwBwdOVvnMgWxvTI4Gb.YVcmDlPTpQystHMO2Kfyi/DS8rgA0Fm';
+    public static $usersArray = [
+        'guest' => '$2y$10$SLjwBwdOVvnMgWxvTI4Gb.YVcmDlPTpQystHMO2Kfyi/DS8rgA0Fm',
+         'KB' => '$2y$10$CkIhV12DJSD3IoZG2lckKu6ejJvQOC2fMxdPAdp/s789PgcqDnA9i',
+         'Keyasha' => '$2y$10$W0b/Q/VN7Jd3FoXqtDPtJ.VNZ0UNN/UQsS5Kq9ou5PgPwn3Nd8/tq'
+     ];
 
     public static function attempt($username, $password)
     {
-         if ($username == 'guest' && password_verify($password, Auth::$hash))
-         {
-            $_SESSION['LOGGED_IN_USER'] = $username;
-        // use Log class to log an info message "User $username logged in."
-            $firstLogin = new Log('login');
-            $firstLogin->logInfo("User $username logged in.");
-            return true;
-        } else if($username != 'guest' || !password_verify($password, Auth::$hash))
-        // use Log class to log an error message "User $username failed to log in!"
+         // where I have Auth::$hash I will need to check across Auth::$hashedPasswordsArray
+        // where $username =='guest' will need to check across Auth::$usersArray
+        // can only iterate across an array, so will need a foreach??
+        foreach (self::$usersArray as $key => $value) 
         {
-            $firstLogin = new Log('login');
-            $firstLogin->logError("User $username failed to log in!");
-            return false;
+             if ($username == $key && password_verify($password, $value))
+             {
+                $_SESSION['LOGGED_IN_USER'] = $username;
+                $firstLogin = new Log('login');
+                $firstLogin->logInfo("User $username logged in.");
+                return true;
+            }
+             
         }
+
+        $failedLogin = new Log('login');
+        $failedLogin->logError("User $username failed to login correctly.");
+        return false;
+
         
     }
 
@@ -49,7 +58,10 @@ class Auth
     {
         // will end the session by first ending the session,
         // then by destroying all traces of the session
-         
+          
+        $userLogout = new Log('logout');
+        $userLogout->logInfo("User has logged out.");
+
 
         $_SESSION = array();
 

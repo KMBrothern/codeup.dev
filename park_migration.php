@@ -1,17 +1,16 @@
 <?php
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'parks_db');
-define('DB_USER', 'parks_user');
-define('DB_PASS', 'parks');
 
+require 'parks_login.php';
 require 'db_connect.php';
+$query = 'DROP TABLE IF EXISTS national_parks';
+$dbc->exec($query);
 
-$query = 'CREATE TABLE users (
+$query = 'CREATE TABLE IF NOT EXISTS national_parks (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(240) NOT NULL,
     location VARCHAR(240) NOT NULL,
-    date_established date(4) NOT NULL,
-    area_in_acres DOUBLE NOT NULL,
+    date_established VARCHAR(240) NOT NULL,
+    area_in_acres DOUBLE(10, 2) NOT NULL,
     PRIMARY KEY (id)
 )';
 

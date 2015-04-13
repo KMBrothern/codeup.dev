@@ -11,6 +11,7 @@ $query = 'CREATE TABLE IF NOT EXISTS national_parks (
     location VARCHAR(240) NOT NULL,
     date_established VARCHAR(240) NOT NULL,
     area_in_acres DOUBLE(10, 2) NOT NULL,
+    description TEXT NOT NULL,
     PRIMARY KEY (id)
 )';
 

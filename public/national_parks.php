@@ -2,30 +2,25 @@
 
 require '../parks_login.php';
 require '../db_connect.php';
+// User Input
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$perPage = isset($_GET['per-page']) && $_GET['per-page'] <= 20 ? (int)$_GET['per-page'] : 4;
+// Positioning
+$start = ($page > 1) ? ($page * $perPage) - $perPage : 0;
+// Query
+$parks = $dbc->prepare("
+    SELECT SQL_CALC_FOUND_ROWS name, location, date_established, area_in_acres, description 
+    FROM national_parks 
+    LIMIT {$start}, {$perPage}
+");
 
-// $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-// $perPage = isset($_GET['per-page']) && $_GET['per-page'] <= 10 ? (int)$_GET['per-page'] : 4;
+$parks->execute();
 
-// $start = ($page > 1) ? ($page * $perPage) - $perPage : 0;
+$parks = $parks->fetchAll(PDO::FETCH_ASSOC);
+// Pages
+$total = $dbc->query("SELECT FOUND_ROWS() as total")->fetch()['total'];
+$pages = ceil($total / $perPage);
 
-// $parks = dbc->prepare("SELECT * FROM national_parks LIMIT 0, 4");
-
-// $parks = $parks->fetchAll(PDO::FETCH_ASSOC);
-
-// $total = $dbc->query("SELECT FOUND_ROWS() as total");
-// fetch()['total'];
-// $pages = (ceil($total / $perPage));
-
-function getParksOne($dbc)
-{
-    // Bring the $dbc variable into scope somehow
-
-    return $dbc->query('SELECT * FROM national_parks LIMIT 4')->fetchAll(PDO::FETCH_ASSOC);
-}
-
-
-
-$parks = getParksOne($dbc);
 
 ?>
 
@@ -47,6 +42,7 @@ $parks = getParksOne($dbc);
                     <th>Location</th>
                     <th>Date Established</th>
                     <th>Area In Acres</th>
+                    <th>Description</th>
                 </tr>
                 <tr><?php foreach($parks as $park): ?>
                     <td><?php echo $park['name']; ?></td>
@@ -58,10 +54,23 @@ $parks = getParksOne($dbc);
             </thead>
         </table>
     </div>
+    <div class="pagination">
+        <?php for($x = 1; $x <= $pages ; $x++): ?>  
+            <a class="pageCount" href="?page=<?php echo $x; ?>&per-page=<?php echo $perPage; ?>"<?php if($page === $x) { echo ' class="selected"'; } ?>>Page: <?php echo $x; ?></a>
+        <?php endfor; ?>
+        
+    </div>
+    
+    <form action="national_parks.php" method="get">
+      Park Name <input type="text" name="parkname"><br>
+      Location <input type="text" name="location"><br>
+      Date Established <input type="text" name="dateestablished"><br>
+      Acres <input type="text" name="acres"><br>
+      <h3>Description:</h3> 
+      <textarea rows="4" cols="50"></textarea>
 
-    <a class="next" href="#">Next</a>
-    <h2 class="pageCount">Page</h2>
-    <a class="previous" href="#">Previous</a>
+      <input type="submit" value="Add Park">
+    </form>        
 </body>
 </html>
 

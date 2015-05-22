@@ -18,10 +18,10 @@ if ($username == '' && $password == '') {
     echo "Please enter your username and password";
 
 } else if(Auth::attempt($username, $password)) {
-    header("Location:authorized.php");
+    header("Location:login.php");
     exit();
 }else {
-    echo "Sorry, login failed.";
+   echo "Sorry, login failed.";
 }
 
 

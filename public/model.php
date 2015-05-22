@@ -2,15 +2,17 @@
 
 class Model
 {
-    protected static $table = 'Keyasha';
 
-    private $attributes = [];
+    protected static $table = 'Keyasha';
 
     public static function getTableName()
     {
 
         return static::$table;
     }
+
+    
+    private $attributes = [];
 
     public function __set($name, $value)
     {
@@ -34,7 +36,7 @@ class Model
 }
 
 
-echo Model::getTableName() . PHP_EOL;
+// echo Model::getTableName() . PHP_EOL;
 // $kb = new Model();
 // $kb->name = 'Keyasha';
 // $kb->gender = 'Female';

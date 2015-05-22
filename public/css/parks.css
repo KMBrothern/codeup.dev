@@ -5,19 +5,24 @@
 }
 .next{
     float: right;
+    position: relative;
     font-size: 35px;
     text-decoration: underline;
     margin-right: 20px;
     font-weight: bold;
 }
 .previous{
+    float: left;
+    position: relative;
     font-size: 35px;
     text-decoration: underline;
     margin-left: 20px;
     font-weight: bold;
 }
 .pageCount{
-    position: absolute;
-    font-size: 25px;
-    text-indent: 600px;
+    float: left;
+    position: relative;
+    font-size: 20px;
+    text-indent: 100px;
 }
+

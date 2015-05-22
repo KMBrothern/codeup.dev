@@ -1,22 +1,23 @@
 
 (function() {
-    var weatherDisplay = $('#weather');
-    // var weatherHtml = '';
+    // var weatherDisplay = $('#weather');
+    var cityName = $('#city');
     var forecastHtml = '';
 
     var currentWeather = $.ajax('http://api.openweathermap.org/data/2.5/weather?q=San+Antonio,TX');
 
     currentWeather.done(function(data) {
-        // console.log(data);
+        console.log(data);
 
         var currentTemp = '<p>' + parseInt((data.main.temp-273.15) * 1.8 + 32) + '°F</p>';
         var icon = '<img src="http://openweathermap.org/img/w/' + data.weather[0].icon + '.png">';
         var windSpeed = '<p>Wind speed: ' + data.wind.speed + '</p>';
-        var humidity = '<p>Humidity:' + data.main.humidity + '</p>';
-        var pressure = '<p>Pressure:' + data.main.humidity + '</p>';
+        var humidity = '<p>Humidity: ' + data.main.humidity + ' %</p>';
+        var pressure = '<p>Pressure: ' + data.main.pressure + ' hpa</p>';
 
         var weatherToDisplay = currentTemp + icon + windSpeed + humidity + pressure;
-
+        var cityName = '<h2>' + data.name + '</h2>';
+        $('#city').html(cityName);
         $('#weather').html(weatherToDisplay);
     });
 
@@ -37,9 +38,9 @@
 
             forecastHtml += '<p>' + element.weather[0].main + ": " + element.weather[0].description + '</p>';
 
-        	forecastHtml += '<p>Humidity: ' + element.humidity + '</p>';
+        	forecastHtml += '<p>Humidity: ' + element.humidity + ' %</p>';
 
-        	forecastHtml += '<p>Pressure: ' + element.pressure + '</p></div>';
+        	forecastHtml += '<p>Pressure: ' + element.pressure + ' hpa</p></div>';
 
 
         	$('#forecast').html(forecastHtml);

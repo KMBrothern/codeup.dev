@@ -1,0 +1,62 @@
+<!Doctype <html>
+<head>
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/united/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/madlibs.css" rel="stylesheet" type="text/css">
+    <title>Awesome Mad Libs!</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- start of madlibs input form -->
+        <div id="questions">
+            <h1>Please fill out the following!</h1>
+                <hr>
+              <form role="form">
+                <div class="form-group">
+                  <label for="noun">Noun</label>
+                  <input id="noun" class="form-control noun" type="text" placeholder="Enter a noun ..">
+                </div>
+                <div class="form-group">
+                  <label for="adjective">Adjective</label>
+                  <input id="adjective" class="form-control adjective" type="text" placeholder="Enter an adjective ..">
+                </div>
+                <div class="form-group">
+                  <label for="noun2">Plural noun</label>
+                  <input id="noun2" class="form-control noun2" type="text" placeholder="Enter a plural noun ..">
+                </div>
+                <div class="form-group">
+                  <label for="insect">An insect, plural</label>
+                  <input id="insect" class="form-control insect" type="text" placeholder="Enter an insect, plural ..">
+                </div>
+                <div class="form-group">
+                  <label for="noun3">Plural noun</label>
+                  <input id="noun3" class="form-control plural-noun" type="text" placeholder="Enter a plural noun ..">
+                </div>
+                <div class="form-group">
+                  <label for="verb">A verb ending in "s"</label>
+                  <input id="verb" class="form-control verb" type="text" placeholder="Enter a verb ending in "s" ..">
+                </div>
+          </form>
+          <button id="btn-click" type="submit" class="btn btn-primary btn-lg">Make Madness!</button>
+          <hr>
+        </div>
+        <!-- end of madlibs input form -->
+
+        <!-- beginning of story -->
+        <div id="story">
+            <h1>Maniacal Madness with MaD lIbS</h1>
+            <hr>
+            <h3>I picked a lovely bunch of <span class="noun"></span> yesterday. They looked so delicious <span class="adjective"></span> sparkling in the morning sun! They were ripe and <span class="noun2"></span>, once I spotted them I went completely <span class="insect"></span> and ran to them as quickly as I could. From the first mind-bending taste of <span class="noun3"></span> in my stomach. I fell for them like a ton of <span class="verb"></span>, and I skipped happily away, treasures in hand to another land!</h3>
+
+            <div>
+                <button type="submit" class="btn btn-primary btn-lg" id="play-btn">Play Again?</button>
+            </div>
+        </div>
+        <!-- end of story -->
+
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="js/madlibs.js"></script>
+</body>
+</html>
